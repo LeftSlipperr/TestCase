@@ -1,4 +1,5 @@
 using Cars.Application.Interfaces;
+using Cars.Application.Services;
 using Cars.Data;
 using Cars.Data.Storage;
 using Microsoft.AspNetCore.Identity;
@@ -21,7 +22,7 @@ public class Program
         builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
         builder.Services.AddScoped<ICarsStorage, CarsStorage>();
-        builder.Services.AddScoped<ICarsService, ICarsService>();
+        builder.Services.AddScoped<ICarsService, CarsService>();
 
 
         var app = builder.Build();
