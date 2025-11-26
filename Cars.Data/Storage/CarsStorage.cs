@@ -1,4 +1,5 @@
-﻿using Cars.Domain.Models;
+﻿using Cars.Application.Interfaces;
+using Cars.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Cars.Data.Storage
 {
-    public class CarsStorage
+    public class CarsStorage : ICarsStorage
     {
         private CarsDbContext _dbContext;
 
