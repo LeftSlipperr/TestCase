@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Cars.Domain.Models
 {
-    internal class Cars
+    public class Cars
     {
         public Guid CarId { get; set; }
         public int TotalWeight { get; set; }
